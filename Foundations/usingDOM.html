@@ -13,22 +13,28 @@
       // Create a new paragraph element
       const paragraph = document.createElement('p');
 
+      // Create a new text node
+      const text = document.createTextNode('Hello World! This is my first DOM manipulation! ');
+
       // Create a new text node for the H1 element
       const headerContent = document.createTextNode(
         'Develop. Preview. Ship. 🚀',
       );
 
       const paragraphContent = document.createTextNode(
-        'A good way to build modern web apps.',
+        'A good start for building modern web apps.',
       );
 
       // Append the text to the H1 element
       header.appendChild(headerContent);
+      // Append the text node to the H1 element
+      paragraph.appendChild(text);
       paragraph.appendChild(paragraphContent);
 
       // Place the H1 element inside the div
       app.appendChild(header);
       app.appendChild(paragraph);
+
     </script>
   </body>
 </html>

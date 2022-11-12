@@ -101,6 +101,9 @@ function HomePage() {
   );
 }
 ```
+*If you run this code, React will give us a warning about a missing `key` prop.* This is because React needs something to uniquely identify items in an array so it knows which elements to update in the DOM.
+
+You can use the names for now since they are currently unique, but it's recommended to use something guaranteed to be unique, like an item ID.
 
 6) You can then use the `array.map()` method to iterate over the array and use an arrow function to map a name to a list item
 

@@ -27,3 +27,91 @@ There are three core concepts of React that you'll need to be familiar with to s
 
 * React components should be capitalized to distinguish them from plain HTML and JavaScript.
 * Second, you use React components the same way you’d use regular HTML tags, with angle brackets `<>`.
+
+## Using variables in JSX
+
+To use the variable you defined, you can use curly braces {}, a special JSX syntax that allows you to write regular JavaScript directly inside your JSX markup.
+
+You can add any JavaScript expression (something that evaluates to a single value) inside curly braces. For example:
+
+1) An object property with dot notation.
+
+```jsx
+   function Header(props) {
+  return <h1>{props.title}</h1>;
+}
+```
+
+2) A template literal:
+
+```jsx
+function Header({ title }) {
+  return <h1>{`Cool ${title}`}</h1>;
+}
+```
+
+3) The returned value of a function.
+
+```jsx
+function createTitle(title) {
+  if (title) {
+    return title;
+  } else {
+    return 'Default title';
+  }
+}
+
+function Header({ title }) {
+  return <h1>{createTitle(title)}</h1>;
+}
+```
+
+4) Or ternary operators.
+
+```jsx
+function Header({ title }) {
+  return <h1>{title ? title : 'Default Title'}</h1>;
+
+  function Page() {
+  return (
+    <div>
+      <Header title="React 💙" />
+      <Header title="A new title" />
+    </div>
+  );
+}
+}
+```
+
+5) Iterating through lists
+
+```jsx
+function HomePage() {
+  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+
+  return (
+    <div>
+      <Header title="Develop. Preview. Ship. 🚀" />
+    </div>
+  );
+}
+```
+
+6) You can then use the `array.map()` method to iterate over the array and use an arrow function to map a name to a list item:
+
+```jsx
+function HomePage() {
+  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+
+  return (
+    <div>
+      <Header title="Develop. Preview. Ship. 🚀" />
+      <ul>
+        {names.map((name) => (
+          <li>{name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+```

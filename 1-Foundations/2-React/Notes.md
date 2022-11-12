@@ -92,6 +92,11 @@ function HomePage() {
   return (
     <div>
       <Header title="Develop. Preview. Ship. 🚀" />
+      <ul>
+        {names.map((name) => (
+          <li>{name}</li>
+        ))}
+      </ul>
     </div>
   );
 }
@@ -108,7 +113,7 @@ function HomePage() {
       <Header title="Develop. Preview. Ship. 🚀" />
       <ul>
         {names.map((name) => (
-          <li>{name}</li>
+          <li key={name}>{name}</li>
         ))}
       </ul>
     </div>

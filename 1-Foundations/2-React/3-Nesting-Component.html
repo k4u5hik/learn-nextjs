@@ -6,22 +6,22 @@
     <!-- Babel Script -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/jsx">
-
-        // Creating a Header function with H1 tag
-        function Header() {
-            return (<h1>Develop. Preview. Ship. 🚀</h1>)
-        }
-
-        function HomePage() {
-            return (
-              <div>
-                {/* Nesting the Header component */}
-                <Header />
-              </div>
-            );
-          }
-
-      ReactDOM.render(<Header />, app);
+        // Write code here:
+        const toDoList = (
+            <ul>
+            <li>Learn React</li>
+            <li>Become a Developer</li>
+            </ul>
+        );
+        
+        const myDiv = (
+            <div>
+            <h1>Things I need to do:</h1>
+            {toDoList}
+            </div>
+        );
+        
+        ReactDOM.render(myDiv, document.getElementById('app'));
     </script>
   </body>
 </html>

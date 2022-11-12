@@ -97,7 +97,7 @@ function HomePage() {
 }
 ```
 
-6) You can then use the `array.map()` method to iterate over the array and use an arrow function to map a name to a list item:
+6) You can then use the `array.map()` method to iterate over the array and use an arrow function to map a name to a list item
 
 ```jsx
 function HomePage() {
@@ -115,3 +115,9 @@ function HomePage() {
   );
 }
 ```
+
+## Additional Resources
+
+**[Passing props to a component](https://beta.reactjs.org/learn/passing-props-to-a-component)**
+**[Rendering lists](https://beta.reactjs.org/learn/rendering-lists)**
+**[Conditional rendering](https://beta.reactjs.org/learn/conditional-rendering)**

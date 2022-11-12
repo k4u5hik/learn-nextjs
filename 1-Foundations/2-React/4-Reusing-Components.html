@@ -8,7 +8,6 @@
 
 </head>
 <body>
-    <div id="app"></div>
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <!-- Babel Script -->
@@ -17,15 +16,15 @@
         function Header(){
             return <h1>This is a header component</h1>
         }
-
+        
         function Footer(){
             return <h3>This is a footer component</h3>
         }
-
+        
         function SinglePost(){
             return <p>This is a single post component</p>
         }
-
+        
         function App(){
             return (
                 <div>
@@ -35,12 +34,14 @@
                     <SinglePost />
                     <Footer />
                 </div>
-            )
-        }
-
-        ReactDOM.render(<App />, app);
-
-    </script>
-    
+                )
+            }
+            
+            ReactDOM.render(<App />, app);
+            
+        </script>
+        
+        <div id="app"></div>
+        
 </body>
 </html>

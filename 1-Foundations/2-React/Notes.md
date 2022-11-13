@@ -196,3 +196,6 @@ Clicking the button will now call the handleClick function, which calls the setL
 
 [Adding Interactivity](https://beta.reactjs.org/learn/adding-interactivity)
 [Managing State](https://beta.reactjs.org/learn/managing-state)
+[State: A Component's Memory](https://beta.reactjs.org/learn/state-a-components-memory#)
+[Meet your first Hook](https://beta.reactjs.org/learn/state-a-components-memory#meet-your-first-hook)
+[Responding to Events](https://beta.reactjs.org/learn/responding-to-events)

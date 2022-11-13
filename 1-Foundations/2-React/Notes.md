@@ -143,7 +143,8 @@ Let’s create a like button inside your `HomePage` component. First, add a butt
 
 ## State and Hooks
 
-React has a set of functions called [hooks](https://reactjs.org/docs/hooks-intro.html). *Hooks allow you to add additional logic such as **state** to your components.* You can think of state as any information in your UI that changes over time, usually triggered by user interaction.
+<span style="color:red">❗ React has a set of functions called [hooks](https://reactjs.org/docs/hooks-intro.html). Hooks allow you to add additional logic such as **state** to your components.</span> 
+You can think of state as any information in your UI that changes over time, usually triggered by user interaction.
 
 ```jsx
 function HomePage() {
@@ -199,3 +200,8 @@ Clicking the button will now call the handleClick function, which calls the setL
 [State: A Component's Memory](https://beta.reactjs.org/learn/state-a-components-memory#)
 [Meet your first Hook](https://beta.reactjs.org/learn/state-a-components-memory#meet-your-first-hook)
 [Responding to Events](https://beta.reactjs.org/learn/responding-to-events)
+[How React handles renders](https://beta.reactjs.org/learn/render-and-commit)
+[How to use refs](https://beta.reactjs.org/learn/referencing-values-with-refs)
+[How to manage State](https://beta.reactjs.org/learn/managing-state)
+[How to use context for deeply nested data](https://beta.reactjs.org/learn/passing-data-deeply-with-context)
+[How to use React API hooks](https://beta.reactjs.org/reference)

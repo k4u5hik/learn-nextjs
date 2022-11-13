@@ -101,7 +101,8 @@ function HomePage() {
   );
 }
 ```
-*If you run this code, React will give us a warning about a missing `key` prop.* This is because React needs something to uniquely identify items in an array so it knows which elements to update in the DOM.
+
+**If you run this code, React will give us a warning about a missing `key` prop.** This is because React needs something to uniquely identify items in an array so it knows which elements to update in the DOM.
 
 You can use the names for now since they are currently unique, but it's recommended to use something guaranteed to be unique, like an item ID.
 
@@ -124,8 +125,74 @@ function HomePage() {
 }
 ```
 
-## Additional Resources
+## Additional Resources for React props and rendering
 
 **[Passing props to a component](https://beta.reactjs.org/learn/passing-props-to-a-component)**
 **[Rendering lists](https://beta.reactjs.org/learn/rendering-lists)**
 **[Conditional rendering](https://beta.reactjs.org/learn/conditional-rendering)**
+
+## Adding Interactivity with State
+
+Let’s create a like button inside your `HomePage` component. First, add a button element inside the `return()` statement. To make the button do something when clicked, you can make use of the `onClick` event.
+
+```jsx
+<button onClick={handleClick}>Like</button>
+```
+
+**In React, event names are camelCased.** The `onClick` event is one of many possible events you can use to respond to user interaction. For example, you can use `onChange` for input fields or `onSubmit` for forms.
+
+## State and Hooks
+
+React has a set of functions called [hooks](https://reactjs.org/docs/hooks-intro.html). *Hooks allow you to add additional logic such as **state** to your components.* You can think of state as any information in your UI that changes over time, usually triggered by user interaction.
+
+```jsx
+function HomePage() {
+  const [likes, setLikes] = React.useState(0);
+}
+```
+
+`useState()` returns an array, and you can access and use those array values inside your component using **array destructuring**.
+The first item in the array is the state `value`, which you can name anything. It’s recommended to name it something descriptive.
+The second item in the array is a function to `update` the value. You can name the update function anything, but it's common to prefix it with `set` followed by the name of the state variable you’re updating.
+You can also take the opportunity to add the initial value of your likes state: zero. Then, you can check the initial state is working by using the state variable inside your component.
+
+```jsx
+function HomePage() {
+  // ...
+  const [likes, setLikes] = React.useState(0);
+
+  return (
+    // ...
+    <button onClick={handleClick}>Like({likes})</button>
+  );
+}
+```
+
+Finally, you can call your state updater function, `setLikes` in your `HomePage` component, let's add it inside the `handleClick()` function you previously defined:
+
+```jsx
+function HomePage() {
+  // ...
+  const [likes, setLikes] = React.useState(0);
+
+  function handleClick() {
+    setLikes(likes + 1);
+  }
+
+  return (
+    <div>
+      {/* ... */}
+      <button onClick={handleClick}>Likes ({likes})</button>
+    </div>
+  );
+}
+```
+
+Clicking the button will now call the handleClick function, which calls the setLikes state updater function with a single argument of the current number of likes + 1.
+
+**Note:** Unlike props which are passed to components as the first function parameter, the state is initiated and stored within a component. You can pass the state information to children components as props, but the logic for updating the state should be kept within the component where state was initially created.
+
+## Additional Resources for React State
+
+[Adding Interactivity](https://beta.reactjs.org/learn/adding-interactivity)
+[Managing State](https://beta.reactjs.org/learn/managing-state)

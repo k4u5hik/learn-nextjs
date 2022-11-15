@@ -100,3 +100,6 @@ Similar to CDNs, Edge servers are distributed to multiple locations around the w
 By running code at the Edge, you can move some of the work that was traditionally done client-side or server-side to the Edge ([see examples with Next.js here](https://vercel.com/features/edge-functions#:~:text=or%20steps%20required.-,CODE%20EXAMPLES,-Unlock%20the%20potential)). This can make your application more performant because it reduces the amount of code sent to the client, and part of the user's request does not have to go all the way back to the origin server - thus reducing latency.
 
 In Next.js, you can run code at the Edge with [Middleware](https://nextjs.org/docs/middleware), and soon with [React Server Components](https://nextjs.org/docs/advanced-features/react-18/overview#react-server-components-alpha).
+
+### Additional Resources
+* [Edge Network Documentation](https://vercel.com/docs/concepts/edge-network/overview?utm_source=next-site&utm_medium=learnpages&utm_campaign=next-website)

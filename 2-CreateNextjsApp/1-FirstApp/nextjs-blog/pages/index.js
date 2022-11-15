@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -9,9 +11,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className="title">
-          Learn <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <h1 className="title">
+      Read <Link href="/posts/first-post">this page!</Link>
+      </h1>
 
         <p className="description">
           Get started by editing <code>pages/index.js</code>

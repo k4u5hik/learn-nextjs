@@ -103,3 +103,8 @@ In Next.js, you can run code at the Edge with [Middleware](https://nextjs.org/do
 
 ### Additional Resources
 * [Edge Network Documentation](https://vercel.com/docs/concepts/edge-network/overview?utm_source=next-site&utm_medium=learnpages&utm_campaign=next-website)
+
+## Other Next.js Features
+
+* [Built-in CSS Support](https://nextjs.org/docs/basic-features/built-in-css-support)
+* [API Routes](https://nextjs.org/docs/api-routes/introduction)
